@@ -1,0 +1,136 @@
+#body_container {
+    margin: 0px;
+    height: 100%;
+}
+
+.header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 4px solid rgb(215, 244, 230);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.logo_box {
+    margin-left: 20px;
+    margin-right: 350px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.logo_box img {
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+#web_app_name {
+    margin: 8px 0px 0px 5px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: 'Fira Code';
+    font-weight: bold;
+}
+
+.menu_icon {
+    margin-right: 50px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 660px;
+    left: 1450px;
+}
+
+.menu_icon div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.menu_bar {
+    margin-top: 8px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.menu_bar h3 {
+    display: inline;
+    margin-right: 22px;
+    font-family: 'Fira Code';
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu_bar h3:hover {
+    border-bottom: 3px solid black;
+}
+
+#menu_dashboard {
+    border-bottom: 3px solid black;
+}
+
+.content_pane {
+    margin: auto;
+    margin-top: 90px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Fira Code';
+    font-weight: bold;
+    display: flex;
+}
+
+.left_box {
+    width: 30%;
+    height: 100%;
+}
+
+.middle_box {
+    /* border: 1px solid red; */
+    width: 40%;
+    height: 100%;
+    /* Positioned to the left */
+    margin-left: 10%;
+    /* background-image: linear-gradient(to bottom, rgb(29, 230, 146), rgb(217, 243, 232)); */
+}
+
+.right_box {
+    width: 30%;
+    height: 100%;
+}
+
+.page_image {
+    width: 500px;
+    height: 500px;
+    margin-left: 70px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+    object-fit: fill;
+}
+
+.content_image {
+    border: 1px solid rgb(5, 221, 95);
+    width: 240px;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 50px;
+    object-fit: fill;
+}
+
+@media screen and (min-width: 320px) {}

@@ -1,0 +1,101 @@
+
+.bg-image {
+    background-image: url(./Dashboard/productivity.jpg);
+    background-size: cover;
+    background-position: top;
+    margin-top: 50px;
+    min-height: 700px;
+  }
+
+.welcome-text {
+    margin-top: 50px;
+}
+
+.login-heading {
+    font-weight: 300;
+}
+
+.header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.logo_box {
+    margin-left: 20px;
+    margin-right: 350px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.logo_box img {
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+#web_app_name {
+    margin: 8px 0px 0px 5px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: 'Fira Code';
+    font-weight: bold;
+}
+
+.menu_bar {
+    margin-top: 8px;
+    margin-left: 45%;
+    margin-right: 0;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.menu_bar h3 {
+    display: inline;
+    margin-right: 30px;
+    font-family: 'Fira Code';
+    font-size: 14px;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    border-bottom: none;
+    color: rgb(215, 244, 230);
+}
+
+
+/*added CSS */
+
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+#load {
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  body {
+    border-top: 16px solid #ffa100;
+  }
+}

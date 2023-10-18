@@ -1,0 +1,32 @@
+{
+    "name": "Student Web Desk",
+    "description": "A productivity tool for students.",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "background": {
+        "page": "./Background/background.html",
+        "persistent": false
+    },
+    "permissions": [
+        "management",
+        "tabs"
+    ],
+
+    "browser_action":{      
+        "default_icon": "logo_icon.png",
+        "default_popup": "./Popup/popup.html"    
+    },
+
+    "icons": {
+        "16": "logo_icon.png",
+        "32": "logo_icon.png",
+        "48": "logo_icon.png",
+        "128": "logo_icon.png"  
+    },
+
+    "chrome_url_overrides": {
+        "newtab":"./NewTab/newtab.html"
+    },
+
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}

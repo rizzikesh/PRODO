@@ -1,0 +1,145 @@
+body{
+    margin: 0px;
+    background-image: url(background.png);
+    background-size: cover;
+}
+
+#body_container{
+    margin: 0px;
+    height: 100%;
+
+}
+
+.header{
+    
+    border-bottom: 4px solid rgb(215,244,230);
+    padding-bottom: 5px;
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo_box{
+    margin: auto;
+    width: fit-content;
+
+    display: flex;
+    align-items:center; /* vertical align*/
+}
+
+.logo_box img{
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+#web_app_name{
+    margin: 8px 0px 0px 5px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: 'Fira Code';
+    font-weight: bold;
+}
+
+#logo{
+
+}
+
+.menu_icon{
+    float: right;
+    margin-right: 50px;
+
+    cursor: pointer;
+    position: relative;
+    bottom: 45px;
+}
+
+.menu_icon div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+
+}
+
+.content_pane{
+    margin: auto;
+    margin-top: 70px;
+    /* border: 1px solid red;*/
+    border-radius: 30px;
+    padding: 40px 30px 30px 30px;
+    width: fit-content;
+    background-color: rgb(85,208,156);
+
+    font-family: 'Fira Code';
+    font-weight: bold;
+    
+}
+
+.date_and_time{
+    margin: auto;
+    width: fit-content;
+
+    text-align: center;
+}
+
+.date_and_time h3{
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.date_and_time h1{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 125px;
+}
+
+.greeting_and_buttons{
+    margin: auto ;
+    margin-top: 0px;
+    width: fit-content;
+    font-size: 30px;
+    text-align: center;
+}
+
+.greeting_and_buttons h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.greeting_and_buttons button{
+    margin-top: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    width: 130px;
+    height: 45px;
+
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 320px) {
+   
+
+}
+
+#current_time {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Fira Code';
+    font-weight: bold;
+    font-size: 75px;
+}
+
+#current_date {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#current_greeting {
+    font-weight: bold;
+    font-size: 30px;
+}

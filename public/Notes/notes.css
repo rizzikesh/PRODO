@@ -1,0 +1,140 @@
+body{
+    margin: 0px;
+    background-size: cover;
+}
+
+#body_container{
+    margin: 0px;
+    height: 100%;
+
+}
+
+.header{
+
+    border-bottom: 4px solid rgb(215,244,230);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+
+    font-size: 10px;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.menu_icon{
+
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.logo_box{
+    margin-left: 20px;
+    margin-right: 220px;
+    width: fit-content;
+
+    display: flex;
+    align-items:center; /* vertical align*/
+}
+
+
+.logo_box img{
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+#web_app_name{
+    margin: 8px 0px 0px 5px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: 'Fira Code';
+    font-weight: bold;
+}
+
+#logo{
+
+}
+
+.menu_icon div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+
+}
+
+.menu_bar {
+    margin-top: 8px;
+    align-content: center;
+}
+
+
+.menu_bar h3{
+    display: inline;
+    margin-right: 30px;
+
+    font-family: Fira Code;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu_bar h3:hover{
+    /* text-decoration: underline; */
+    border-bottom: 3px solid black;
+}
+
+ul {
+    margin: 8px;
+    padding: 10px;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 20px;
+    list-style-type: none;
+    background: rgb(85,208,156);
+    font-size: 14px;
+    transition: 0.2s;
+    text-align: center;
+    width: 300px;
+}
+
+ul li:hover {
+    background-color: rgb(255, 255, 255);;
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.addBtn {
+    padding: 5px;
+    width: 10%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
