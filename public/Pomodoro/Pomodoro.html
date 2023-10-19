@@ -46,7 +46,30 @@
 	</head>
 
 	<body>
+		<div class="menu_bar">
+			<a href="../Dashboard/dashboard.html">
+				<h3 id="menu_dashboard">Dashboard</h3>
+			</a>
+			<a href="../Calendar/calendar.html">
+				<h3 id="menu_calendar">Calendar</h3>
+			</a>
+			
+			<a href="../ToDo/todo.html">
+				<h3 id="menu_todo">To-Do</h3>
+			</a>
+			<a href="../Pomodoro/Pomodoro.html">
+				<h3 id="menu_study">Pomodoro</h3>
+			</a>
+			<a href="../Widgets/widgets.html">
+				<h3 id="menu_widgets">Widgets</h3>
+			</a>
+			<a href="../Notes/notes.html">
+				<h3 id="menu_notes">Notes</h3>
+			</a>
+		</div>
+
 		<!-- Scroll Indicator -->
+		
 		<div class="line" id="scrollIndicator"></div>
 
 		<!-- Main Content -->
@@ -61,7 +84,7 @@
 			<!-- Brand Name -->
 			<div class="d-flex justify-content-center navbar navbar-light bg-light border-bottom">
 				<nav class="navbar navbar-light bg-light py-0 justify-content-center" id="brand">
-					<a class="navbar-brand" href="/">
+					<a class="navbar-brand">
 						<img src="assets/img/logo.png" width="50" height="50" class="align-top" alt="PomodoroTimers Logo" />
 						<span id="brandName">PomodoroTimers</span>
 					</a>
@@ -103,11 +126,6 @@
 					</div>
 					<div class="col-3">
 						<ul class="nav nav-pills justify-content-end">
-							<li class="nav-item">
-								<a class="nav-link px-2 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#toDoModal" href="#"
-									><i class="fas fa-tasks fa-lg"></i
-								></a>
-							</li>
 							<li class="nav-item pl-2 pr-0">
 								<a class="nav-link px-2 mx-1 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#loggingModal" href="#"
 									><i class="fas fa-chart-bar fa-lg"></i

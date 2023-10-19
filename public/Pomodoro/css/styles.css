@@ -609,3 +609,29 @@ input:checked + .slider:before {
 	background-image: -webkit-linear-gradient(left, var(--main-red-color) 50%, transparent 50%),
 		-webkit-linear-gradient(left, #ddd 50%, var(--main-red-color) 50%);
 }
+
+.menu_icon div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+
+}
+
+.menu_bar {
+    margin-top: 8px;
+    align-content: center;
+}
+.menu_bar h3{
+    display: inline;
+    margin-right: 22px;
+
+    font-family: Fira Code;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu_bar h3:hover{
+    /* text-decoration: underline; */
+    border-bottom: 3px solid black;
+}
