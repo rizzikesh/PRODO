@@ -52,8 +52,7 @@ a {
     font-weight: bold;
 }
 
-#logo {
-}
+
 
 .menu_icon div {
     width: 35px;
@@ -298,7 +297,6 @@ a {
 	position: relative;
 	z-index: 1;
 	display: inline-block;
-	float: left;
 	width: 90px;
 	height: 40px;
 	line-height: 40px;
