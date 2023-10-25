@@ -1,219 +1,223 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="dashboard for student-webdesk">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>PRODO</title>
-        <!-- title bar icon -->
-        <link rel="icon" href="../logo_icon.png" type="image/icon type">
-    
-        <!-- Font Awesome Icon-->
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    
-        <!-- BootStrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-        <link rel="stylesheet" href="tasks.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <script src=""></script>
-    
-            <!-- auth -->
-            <script type="module">
-                // Import functions
-                import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
-                import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js";
-        
-                // Firebase configuration
-                const firebaseConfig = {
-                    apiKey: "AIzaSyD6cBjkEmTTc7uVNC3sD0RlFgF_9fAPY9g",
-                    authDomain: "student-web-desk.firebaseapp.com",
-                    databaseURL: "https://student-web-desk-default-rtdb.firebaseio.com",
-                    projectId: "student-web-desk",
-                    storageBucket: "student-web-desk.appspot.com",
-                    messagingSenderId: "97747219553",
-                    appId: "1:97747219553:web:fed6cae0333b3eedc02620",
-                    measurementId: "G-LT7LDF5MRT"
-                };
-        
-                // Initialize Firebase
-                const app = initializeApp(firebaseConfig);
-                const auth = getAuth();
-        
-                // listen for current user
-                onAuthStateChanged(auth, (user) => {
-                    if (user) {
-                        // User is signed in
-                        const uid = user.uid;
-                        // ...
-                        console.log(uid);
-        
-                        var loggedInUser = document.querySelector("#user_email");
-                        loggedInUser = user.email;
-        
-                        // ...
-                        console.log(loggedInUser);
-        
-                        $("#userInfoEmail").text(loggedInUser);
-                        $("#userCard").show();
-                        $("#logoutButton").show();
-                    } else {
-                        // User is signed out
-                        // ...
-                        $("#alertInfoModal").modal('show');
-        
-                        // hide and redirect after 3 sec
-                        setTimeout(function () {
-                            $("#alertInfoModal").modal('hide');
-        
-                            window.location.href = '../index.html';
-                        }, 3000);
-                    }
-                });
-        
-                // logging out
-                const logoutButton = document.querySelector("#logoutButton");
-                logoutButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-        
-                    auth.signOut().then(() => {
-                        console.log("user logged out");
-        
-                        // show alert
-                        $("#alertInfoModal").modal('show');
-        
-                        // hide after 3 sec
-                        setTimeout(function () {
-                            $("#alertInfoModal").modal('hide');
-                        }, 3000);
-        
-                    });
-        
-                });
-        
-            </script>
-    </head>
-    <body>
-        <div class="header">
-            <a href="../NewTab/newtab.html">
-                <div class="logo_box">
-                    <img src="../Images/logo_icon.png">
-                    <h1 id="web_app_name">PRODO</h1>
-                </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="dashboard for student-webdesk">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PRODO</title>
+    <!-- title bar icon -->
+    <link rel="icon" href="../logo_icon.png" type="image/icon type">
+
+    <!-- Font Awesome Icon-->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="tasks.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src=""></script>
+
+    <!-- auth -->
+    <script type="module">
+        // Import functions
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD6cBjkEmTTc7uVNC3sD0RlFgF_9fAPY9g",
+            authDomain: "student-web-desk.firebaseapp.com",
+            databaseURL: "https://student-web-desk-default-rtdb.firebaseio.com",
+            projectId: "student-web-desk",
+            storageBucket: "student-web-desk.appspot.com",
+            messagingSenderId: "97747219553",
+            appId: "1:97747219553:web:fed6cae0333b3eedc02620",
+            measurementId: "G-LT7LDF5MRT"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        // listen for current user
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in
+                const uid = user.uid;
+                // ...
+                console.log(uid);
+
+                var loggedInUser = document.querySelector("#user_email");
+                loggedInUser = user.email;
+
+                // ...
+                console.log(loggedInUser);
+
+                $("#userInfoEmail").text(loggedInUser);
+                $("#userCard").show();
+                $("#logoutButton").show();
+            } else {
+                // User is signed out
+                // ...
+                $("#alertInfoModal").modal('show');
+
+                // hide and redirect after 3 sec
+                setTimeout(function () {
+                    $("#alertInfoModal").modal('hide');
+
+                    window.location.href = '../index.html';
+                }, 3000);
+            }
+        });
+
+        // logging out
+        const logoutButton = document.querySelector("#logoutButton");
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            auth.signOut().then(() => {
+                console.log("user logged out");
+
+                // show alert
+                $("#alertInfoModal").modal('show');
+
+                // hide after 3 sec
+                setTimeout(function () {
+                    $("#alertInfoModal").modal('hide');
+                }, 3000);
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="../NewTab/newtab.html">
+            <div class="logo_box">
+                <img src="../Images/logo_icon.png">
+                <h1 id="web_app_name">PRODO</h1>
+            </div>
+        </a>
+        <div class="menu_bar">
+            <a href="../Dashboard/dashboard.html">
+                <h3 id="menu_dashboard">Dashboard</h3>
             </a>
-            <div class="menu_bar">
-                <a href="../Dashboard/dashboard.html">
-                    <h3 id="menu_dashboard">Dashboard</h3>
-                </a>
-                
-                <a href="../Calendar/calendar.html">
-                    <h3 id="menu_calendar">Calendar</h3>
-                </a>
-                <a href="../ToDo/todo.html">
-                    <h3 id="menu_todo">To-Do</h3>
-                </a>
-                <a href="../Pomodoro/Pomodoro.html">
-                    <h3 id="menu_study">Pomodoro</h3>
-                </a>
 
-                    <h3 id="menu_widgets">About Us</h3>
-                <a href="../Notes/notes.html">
-                    <h3 id="menu_notes">Notes</h3>
-                </a>
-            </div>
-    
-            <!-- user card -->
-            <div id="userCard" class="card bg-light"
-                style="display: none; position: relative; right: 10%; top: 0px; text-align: center; padding: 5px; height: 40px;">
-                <div id="userIcon">
-                    <i style="font-size: 24px; color: rgb(85,208,156);" class='fas fa-user-astronaut'></i>
-                    <span style="font-size: 16px;" id="userInfoEmail"></span>
-                </div>
-    
-            </div>
-    
-            <!--logout button-->
-            <div id="logoutButton" style="display: none; position: absolute; right: 4%; top: 20px;">
-                <button onclick="" class="btn btn-primary">Logout</button>
-            </div>
+            <a href="../Calendar/calendar.html">
+                <h3 id="menu_calendar">Calendar</h3>
+            </a>
+            <a href="../ToDo/todo.html">
+                <h3 id="menu_todo">To-Do</h3>
+            </a>
+            <a href="../Pomodoro/Pomodoro.html">
+                <h3 id="menu_study">Pomodoro</h3>
+            </a>
+
+            <h3 id="menu_widgets">About Us</h3>
+            <a href="../Notes/notes.html">
+                <h3 id="menu_notes">Notes</h3>
+            </a>
+        </div>
+
+        <!-- user card -->
+        <div id="userCard" class="card bg-light"
+            style="display: none; position: relative; right: 10%; top: 0px; text-align: center; padding: 5px; height: 40px;">
+            <div id="userIcon">
+                <i style="font-size: 24px; color: rgb(85,208,156);" class='fas fa-user-astronaut'></i>
+                <span style="font-size: 16px;" id="userInfoEmail"></span>
             </div>
 
-            <!-- about us -->
-            <div class="about-section">
-                <h1>About Us </h1>
-                <p>Welcome to Prodo, your go-to student productivity app! Prodo is designed to help students stay organized, focused, and productive. Whether you need to manage your schedule, take notes, use a Pomodoro timer, or organize tasks using Kanban boards, Prodo has you covered.</p>
-              </div>
-              
-              <h2 style="text-align:center">Our Team</h2>
-              <div class="row">
-                <div class="column">
-                  <div class="card">
-                    <img src="" alt="" style="width:100%">
-                    <div class="container">
-                      <h2>Rishikesh Bhor</h2>
-                      <p class="title">Contributor</p>
-                      <p>Some text that describes me lorem ipsum ipsum lorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nemo impedit facere, ipsa aut obcaecati hic quisquam saepe exercitationem beatae nostrum mollitia, quod at fuga odit illo? Dicta, doloremque et.</p>
-                      <p>hehe@example.com</p>
-                      <p><button class="button">Contact</button></p>
-                    </div>
-                  </div>
+        </div>
+
+        <!--logout button-->
+        <div id="logoutButton" style="display: none; position: absolute; right: 4%; top: 20px;">
+            <button onclick="" class="btn btn-primary">Logout</button>
+        </div>
+    </div>
+
+    <!-- about us -->
+    <div class="about-section">
+        <h1>About Us </h1>
+        <p>Welcome to Prodo, your go-to student productivity app! Prodo is designed to help students stay organized,
+            focused, and productive. Whether you need to manage your schedule, take notes, use a Pomodoro timer, or
+            organize tasks using Kanban boards, Prodo has you covered.</p>
+    </div>
+
+    <h2 style="text-align:center">Our Team</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <img src="2.jpg" style="width:100%" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5><U>RISHIKESH BHOR</U></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit nam fugit quo illum aliquid odio veniam excepturi blanditiis. Ipsam illum dicta temporibus quisquam perferendis voluptatum, doloribus rem cumque beatae ratione?  </p>
                 </div>
-
-                <div class="column">
-                    <div class="card">
-                      <img src="" alt="AJ" style="width:100%">
-                      <div class="container">
-                        <h2>Ayan Joshi</h2>
-                        <p class="title">Contributor</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>ayanjoshi182003@gmail.com</p>
-                        <p><button class="button">Contact</button></p>
-                      </div>
-                    </div>
-                  </div>
-              
-                <div class="column">
-                  <div class="card">
-                    <img src="" alt="" style="width:100%">
-                    <div class="container">
-                      <h2>Aarya Paradkar</h2>
-                      <p class="title">Contributor</p>
-                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                      <p>hehe@example.com</p>
-                      <p><button class="button">Contact</button></p>
-                    </div>
-                  </div>
+                    <p><button class="button">Contact</button></p>
                 </div>
-              
-                <div class="column">
-                  <div class="card">
-                    <img src="" alt="" style="width:100%">
-                    <div class="container">
-                      <h2>Arya Sawant</h2>
-                      <p class="title">Contributor</p>
-                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                      <p>hehe@example.com</p>
-                      <p><button class="button">Contact</button></p>
-                    </div>
-                  </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <img src="2.jpg" style="width:100%" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5><U>AYAN JOSHI</U></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit nam fugit quo illum aliquid odio veniam excepturi blanditiis. Ipsam illum dicta temporibus quisquam perferendis voluptatum, doloribus rem cumque beatae ratione? </p>
                 </div>
-              </div>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
 
-            
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <img src="2.jpg" style="width:100%" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5><U>ARYA SAWANT</U></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit nam fugit quo illum aliquid odio veniam excepturi blanditiis. Ipsam illum dicta temporibus quisquam perferendis voluptatum, doloribus rem cumque beatae ratione?</p>
+                </div>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <img src="2.jpg" style="width:100%" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5><U>AARYA PARADKAR</U></h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit nam fugit quo illum aliquid odio veniam excepturi blanditiis. Ipsam illum dicta temporibus quisquam perferendis voluptatum, doloribus rem cumque beatae ratione?</p>
+                </div>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
 
-            
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

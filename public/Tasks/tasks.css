@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-    border-bottom: 4px solid rgb(215,244,230);
+    border-bottom: 4px solid rgb(215, 244, 230);
     padding-top: 10px;
     padding-bottom: 15px;
     padding-right: 15px;
@@ -34,15 +34,16 @@ a {
     margin-right: 220px;
     width: fit-content;
     display: flex;
-    align-items: center; /* vertical align*/
+    align-items: center;
+    /* vertical align*/
 }
 
-    .logo_box img {
-        margin: 8px 0px 0px 0px;
-        padding: 0px;
-        width: 50px;
-        height: 50px;
-    }
+.logo_box img {
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+}
 
 #web_app_name {
     margin: 8px 0px 0px 5px;
@@ -66,18 +67,18 @@ a {
     align-content: center;
 }
 
-    .menu_bar h3 {
-        display: inline;
-        margin-right: 30px;
-        font-family: Fira Code;
-        font-size: 14px;
-        cursor: pointer;
-    }
+.menu_bar h3 {
+    display: inline;
+    margin-right: 30px;
+    font-family: Fira Code;
+    font-size: 14px;
+    cursor: pointer;
+}
 
-        .menu_bar h3:hover {
-            /* text-decoration: underline; */
-            border-bottom: 3px solid black;
-        }
+.menu_bar h3:hover {
+    /* text-decoration: underline; */
+    border-bottom: 3px solid black;
+}
 
 #menu_widgets {
     border-bottom: 3px solid black;
@@ -86,7 +87,8 @@ a {
 .content_pane {
     margin: auto;
     margin-top: 70px;
-    /* border: 1px solid red; */ /* i use borders to see where the html elements are before I position them */
+    /* border: 1px solid red; */
+    /* i use borders to see where the html elements are before I position them */
     width: 99%;
     font-family: 'Fira Code';
     font-weight: bold;
@@ -103,14 +105,14 @@ a {
     padding-bottom: 30px;
     width: 40%;
     height: 50vh;
-    background-color: rgb(85,208,156);
+    background-color: rgb(85, 208, 156);
     border: 1px solid black;
     box-shadow: 4px 6px lightgray;
 }
 
-    .left_panel input {
-        width: 100%;
-    }
+.left_panel input {
+    width: 100%;
+}
 
 .strike {
     text-decoration: line-through;
@@ -140,20 +142,21 @@ td {
     padding-top: 30px;
     padding-bottom: 30px;
     height: fit-content;
-    background-color: rgb(85,208,156);
+    background-color: rgb(85, 208, 156);
     border: 1px solid black;
     box-shadow: 4px 6px lightgray;
 }
 
-    .right_panel h2 {
-        border-bottom: 3px solid black;
-    }
+.right_panel h2 {
+    border-bottom: 3px solid black;
+}
 
 
 .page_image {
     width: 95%;
     height: 87%;
-    background-color: aliceblue; /* can remove this - it's just for visualization */
+    background-color: aliceblue;
+    /* can remove this - it's just for visualization */
 }
 
 .margins {
@@ -174,7 +177,7 @@ td {
     min-height: 600px;
 }
 
-.page_image {  
+.page_image {
     width: 500px;
     height: 500px;
     margin-left: 70px;
@@ -184,58 +187,73 @@ td {
     object-fit: fill;
 }
 
-@media screen and (min-width: 320px) {
-}
+@media screen and (min-width: 320px) {}
 
 /* ABOUT US */
 
 body {
     font-family: 'Fira Code';
     margin: 0;
-  }
-  
-  html {
+}
+
+html {
     box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
-  
-  .column {
+}
+
+.column {
     float: inherit;
     width: 35.3%;
     margin-bottom: 16px;
     padding: 0 8px;
-  }
-  
-  .card {
+}
+
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
-  }
-  
-  .about-section {
+}
+
+.about-section {
     padding: 50px;
     text-align: center;
     background-color: white;
     color: black;
-  }
-  
-  .container {
+}
+
+.container {
     padding: 0 16px;
-  }
-  
-  .container::after, .row::after {
+}
+
+.row{
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card img{
+    margin-top: 5%;
+}
+
+.container::after,
+.row::after {
     content: "";
     clear: both;
     display: table;
-  }
-  
-  .title {
+}
+
+.title {
     color: white;
-  }
-  
-  .button {
+}
+
+.button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -245,16 +263,15 @@ body {
     text-align: center;
     cursor: pointer;
     width: 100%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
+}
 
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
