@@ -1,6 +1,6 @@
 # Prodo - Student Productivity App
 
-### https://prodo-37abex4gl-ayan-joshi.vercel.app/
+### https://prodo-mauve.vercel.app/
 
 Welcome to Prodo, your go-to student productivity app! Prodo is designed to help students stay organized, focused, and productive. Whether you need to manage your schedule, take notes, use a Pomodoro timer, or organize tasks using Kanban boards, Prodo has you covered.
 
