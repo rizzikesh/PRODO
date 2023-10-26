@@ -267,7 +267,7 @@ html {
     cursor: pointer;
     transition: all 0.1s ease-in;
     border: 6px double black;
-    color: rgb(255, 123, 0);
+    color: rgb(5, 221, 95);
 }
 
 .card:hover h5 {
@@ -327,6 +327,7 @@ html {
 
 .button:hover {
     background-color: #555;
+    color: rgb(5, 221, 95);
 }
 
 footer {
