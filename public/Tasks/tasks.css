@@ -107,7 +107,7 @@ a {
     padding-bottom: 30px;
     width: 40%;
     height: 50vh;
-    background-color: rgb(85, 208, 156);
+    background-color:  rgb(5, 221, 95);
     border: 1px solid black;
     box-shadow: 4px 6px lightgray;
 }
@@ -144,7 +144,7 @@ td {
     padding-top: 30px;
     padding-bottom: 30px;
     height: fit-content;
-    background-color: rgb(85, 208, 156);
+    background-color:  rgb(5, 221, 95);
     border: 1px solid black;
     box-shadow: 4px 6px lightgray;
 }
@@ -157,7 +157,7 @@ td {
 .page_image {
     width: 95%;
     height: 87%;
-    background-color: aliceblue;
+    background-color:  rgb(5, 221, 95);
     /* can remove this - it's just for visualization */
 }
 
