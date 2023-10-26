@@ -54,7 +54,7 @@ a {
 }
 
 .bg-light{
-    background-color: #e4e4e4;
+    background-color: #726a6a;
 }
 
 .menu_icon div {
@@ -327,6 +327,48 @@ html {
 
 .button:hover {
     background-color: #555;
+}
+
+footer {
+    background-color: rgb(1, 4, 14);
+    color: rgb(255, 38, 0);
+}
+
+.footer {
+    display: flex;
+    padding: 25px 120px;
+    justify-content: space-around;
+}
+
+.footer-right {
+    text-align: center;
+    color: rgb(9, 255, 0);
+    padding: 10px 0;
+}
+
+.footer-first h1 {
+    font-size: 2rem;
+}
+
+#footer {
+    color: #00ffd5;
+    font-size: small;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+#footer:hover {
+    cursor: pointer;
+    border: 1px solid #ffa600;
+    border-radius: 3px;
+
+}
+
+.footer i,
+a {
+    margin: 0 2px;
+    font-size: 22px;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 650px) {
