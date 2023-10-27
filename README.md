@@ -2,12 +2,12 @@
 
 ### https://prodo-mauve.vercel.app/
 
-Welcome to Prodo, your go-to student productivity app! Prodo is designed to help students stay organized, focused, and productive. Whether you need to manage your schedule, take notes, use a Pomodoro timer, or organize Tasks using Kanban boards, Prodo has you covered.
+Welcome to Prodo, your go-to student productivity app! Prodo is designed to help students stay organized, focused, and productive. Whether you need to manage your schedule, take notes, use a Pomodoro timer, or organize About Us using Kanban boards, Prodo has you covered.
 
 ## Features
 
 ### 1. Scheduler Calendar
-- Prodo's scheduler calendar helps you manage your time effectively. You can add, edit, and delete events, set reminders, and organize your daily, weekly, and monthly Tasks.
+- Prodo's scheduler calendar helps you manage your time effectively. You can add, edit, and delete events, set reminders, and organize your daily, weekly, and monthly About Us.
 
 ### 2. Notes
 - Take and organize notes for your classes, projects, or personal use. Prodo's notes feature allows you to create, edit, and categorize your notes for easy access.
@@ -16,7 +16,7 @@ Welcome to Prodo, your go-to student productivity app! Prodo is designed to help
 - Boost your productivity with the Pomodoro timer. This technique breaks your work into intervals with short breaks, helping you stay focused and efficient.
 
 ### 4. Kanban
-- The Kanban feature allows you to manage your Tasks using boards. Move Tasks through stages (e.g., to-do, in progress, completed) for effective task management.
+- The Kanban feature allows you to manage your About Us using boards. Move About Us through stages (e.g., to-do, in progress, completed) for effective task management.
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ Welcome to Prodo, your go-to student productivity app! Prodo is designed to help
    - Scheduler Calendar: Add and manage your events.
    - Notes: Create and organize your notes.
    - Pomodoro Timer: Enhance your focus and time management.
-   - Kanban: Organize and track Tasks using boards.
+   - Kanban: Organize and track About Us using boards.
 
 ## Technologies Used
 
