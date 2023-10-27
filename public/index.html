@@ -260,7 +260,7 @@
     // Import functions
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
     import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js";
-    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js";
 
     // Firebase configuration
     const firebaseConfig = {
@@ -311,55 +311,62 @@
     //sign up user
     const signupForm = document.querySelector("#signupForm");
 
-    signupForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    // Wrap the event handler in an async function
+signupForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-      const signupEmail = signupForm['signupEmail'].value;
-      const signupPassword = signupForm['signupPassword'].value;
-      // const signupUsername = signupForm['signupUsername'].value;
+  const signupEmail = signupForm['signupEmail'].value;
+  const signupPassword = signupForm['signupPassword'].value;
 
-      console.log(signupEmail, signupPassword)
+  try {
+    // Create the user in Firebase Authentication
+    const userCredential = await createUserWithEmailAndPassword(auth, signupEmail, signupPassword);
+    const user = userCredential.user;
 
-      createUserWithEmailAndPassword(auth, signupEmail, signupPassword).then(userCredential => {
+    // Store user details in Firestore
+    const db = getFirestore();
 
-        console.log(userCredential);
-        const user = userCredential.user;
-        console.log(user);
+    // Define a collection where you want to store user details (e.g., 'users')
+    const usersCollection = collection(db, 'users');
 
-      }).then(() => {
-        // close the signup modal & reset form
-        $("#signupModal").modal('hide');
-        signupForm.reset();
+    // Define the user data you want to store in Firestore
+    const userData = {
+      email: signupEmail,
+      // Add more user data fields as needed
+    };
 
-        // sign up success alert
-        $("#alertInfoModal").modal('show');
+    // Add the user data to Firestore
+    await addDoc(usersCollection, userData);
 
-        // redirect after 3 sec
-        setTimeout(function () {
-          window.location.href = '/public/Newtab/newtab.html';
-        }, 3000);
+    // Close the signup modal and reset the form
+    $("#signupModal").modal('hide');
+    signupForm.reset();
 
-      }).catch((error) => {
-        // close window
-        $("#signupModal").modal('hide');
-        const errorCode = error.code;
-        const errorMessage = error.message;
+    // Sign up success alert
+    $("#alertInfoModal").modal('show');
 
-        // show error
-        $("#alertErrorModal").modal('show');
+    // Redirect after 3 seconds
+    setTimeout(function () {
+      window.location.href = '/public/Newtab/newtab.html';
+    }, 3000);
+  } catch (error) {
+    // Handle errors
+    console.error(error);
 
-        // hide after 3 sec
-        setTimeout(function () {
-          $("#alertErrorModal").modal('hide');
+    // Close window
+    $("#signupModal").modal('hide');
 
-          //show form again
-          $("#signupModal").modal('show');
-        }, 3000);
+    // Show error
+    $("#alertErrorModal").modal('show');
 
+    // Hide after 3 seconds and show the signup form again
+    setTimeout(function () {
+      $("#alertErrorModal").modal('hide');
+      $("#signupModal").modal('show');
+    }, 3000);
+  }
+});
 
-      });
-
-    });
 
     //login user
     const loginForm = document.querySelector("#loginForm");
