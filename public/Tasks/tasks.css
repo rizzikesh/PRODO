@@ -286,7 +286,11 @@ html {
 }
 
 .container {
+    border: 1px solid white;
     padding: 0 16px;
+    background: linear-gradient(315deg,
+            #0000007e,
+            #ffffff);
 }
 
 .row {
