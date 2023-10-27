@@ -9,7 +9,7 @@ var resetButton = document.getElementById("resetButton");
 var stopButton = document.getElementById("stopButton");
 var saveButton = document.getElementById("saveButton");
 var clearButton = document.getElementById("clearButton");
-var clearTasksButton = document.getElementById("clearTasksButton");
+var clearAbout UsButton = document.getElementById("clearAbout UsButton");
 //Time left displayed
 var timeLeftDisplay = document.getElementById("timeLeft");
 //Inputs
@@ -24,7 +24,7 @@ var backgroundMusicOptions = document.getElementById("backgroundMusicOptions");
 var longBreakIntervalInput = document.getElementById("longBreakIntervalInput");
 
 var locationUpdateLog = document.getElementById("locationUpdateLog");
-var listOfTasks = document.getElementById("listOfTasks");
+var listOfAbout Us = document.getElementById("listOfAbout Us");
 
 var progressValue = document.querySelector(".progress-value");
 var notificationTime;
@@ -194,7 +194,7 @@ function displayTodoList() {
 			showNoTaskTodayText();
 		} else {
 			//List is not empty
-			listOfTasks.innerHTML = localStorage.todoContents;
+			listOfAbout Us.innerHTML = localStorage.todoContents;
 			removeNoTaskTodayText();
 		}
 	}
@@ -644,16 +644,16 @@ taskInput.addEventListener("keypress", function () {
 });
 function submitTask() {
 	if (taskInput.value !== "") {
-		displayTasks();
+		displayAbout Us();
 		taskInput.value = "";
-		storeTasks();
+		storeAbout Us();
 	}
 }
 
 var taskItem;
-var listOfTasks = document.getElementById("listOfTasks");
+var listOfAbout Us = document.getElementById("listOfAbout Us");
 
-function displayTasks() {
+function displayAbout Us() {
 	var listItem = document.createElement("li");
 	var todo = document.createTextNode(taskInput.value);
 	listItem.appendChild(todo);
@@ -665,33 +665,33 @@ function displayTasks() {
 	var completedButton = document.createElement("button");
 	completedButton.innerHTML = '<i class="fas fa-trash-alt fa-sm"></i>';
 	completedButton.classList.add("close");
-	completedButton.setAttribute("onclick", "deleteTasks(this)");
+	completedButton.setAttribute("onclick", "deleteAbout Us(this)");
 	listItem.appendChild(completedButton);
-	listOfTasks.appendChild(listItem);
-	storeTasks();
+	listOfAbout Us.appendChild(listItem);
+	storeAbout Us();
 	removeNoTaskTodayText();
 }
 
 function checkedWhenclicked(item) {
 	item.style.transition = "all 0.2s ease-in";
 	item.classList.toggle("done");
-	storeTasks();
+	storeAbout Us();
 }
 
-function deleteTasks(item) {
+function deleteAbout Us(item) {
 	item.parentElement.style.transition = "all 0.2s ease-in";
 	item.parentElement.classList.add("slide-away");
 	item.parentElement.addEventListener("transitionend", function () {
 		item.parentElement.remove();
-		storeTasks();
+		storeAbout Us();
 		if (listIsEmpty()) {
 			showNoTaskTodayText();
 		}
 	});
 }
-clearTasksButton.addEventListener("click", function () {
-	listOfTasks.innerHTML = "";
-	storeTasks();
+clearAbout UsButton.addEventListener("click", function () {
+	listOfAbout Us.innerHTML = "";
+	storeAbout Us();
 	showNoTaskTodayText();
 });
 
@@ -705,8 +705,8 @@ function taskMouseOut(item) {
 	item.style.transition = "100ms";
 }
 // ================================Local storage for todo list==========================================
-function storeTasks() {
-	localStorage.todoContents = listOfTasks.innerHTML;
+function storeAbout Us() {
+	localStorage.todoContents = listOfAbout Us.innerHTML;
 }
 // ====================================No task Today Text====================================================
 function showNoTaskTodayText() {
